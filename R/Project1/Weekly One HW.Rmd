@@ -1,0 +1,48 @@
+---
+title: "Week 1 HW"
+author: "Bill"
+date: "July 15, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Question 1
+
+```{r q1}
+
+factTwelve <- 1
+  
+for (i in 1:12)
+{
+    factTwelve <- factTwelve * i
+}
+
+factTwelve
+```
+
+## Question 2
+
+```{r q2}
+
+newSequence <- seq(20, 50, 5)
+
+newSequence
+
+```
+
+## Question 3
+
+```{r q3}
+
+a <- 5
+b <- 6
+c <- 7
+x <- 1
+
+quadEquation <- (a * x^2) + (b * x) + c
+
+quadEquation
+```

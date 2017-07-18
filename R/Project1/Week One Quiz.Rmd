@@ -1,0 +1,155 @@
+---
+title: "Week 1 Quiz"
+author: "Bill"
+date: "July 14, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Questions #1 - 4
+
+Placeholder
+
+```{r q1-4}
+new_vec <- c(1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,16,17,18,19,20)
+char_vec <- as.character(new_vec)
+fact_vec <- factor(new_vec)
+
+new_vec
+char_vec
+fact_vec
+nlevels(fact_vec)
+
+```
+
+## Question #5
+
+Placeholder
+
+```{r q5}
+formula <- ((3 * (new_vec ^2)) - (4 * new_vec) + 1 )
+
+formula
+```
+
+## Question #6
+
+```{r q6}
+named_list <- list(item1 = 1, item2 = 2, item3 = 3)
+
+named_list
+```
+
+## Question 7
+
+```{r q7}
+df_num <- as.numeric(c(1,2,3,1,2,3,1,2,3,1))
+df_char <- as.character(c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"))
+df_fact <- c("hi", "bye", "bye", "for", "hi", "hi","hi","hi", "hi", "hi")
+df_date <- as.Date(c("2001-1-1", "2002-1-1", "2003-1-1", "2004-1-1", "2005-1-1",
+ "2006-1-1", "2007-1-1", "2008-1-1", "2009-1-1", "2010-1-1"))
+
+df <- data.frame(df_num, df_char, df_fact, df_date)
+
+df
+```
+
+## Question 8
+
+```{r q8}
+new_df <- data.frame(df_num = 2, df_char = "one",
+ df_fact = "there", df_date = "2011-01-01")
+
+str(new_df)
+new_df$df_date <- as.Date(new_df$df_date)
+new_df$df_num <- as.character(new_df$df_num)
+str(new_df)
+new_df$df_num
+str(new_df)
+df <- rbind(df, new_df)
+df
+str(df)
+
+
+
+```
+
+## Question 9
+
+```{r q9}
+
+# readCSV <- read.table(file = "temperatures.csv", header = TRUE, sep = ",")
+```
+
+## Question 10
+
+```{r}
+
+principal <- 1500
+years <- 6
+yearlyPeriods <- 12
+interestRate <- 0.0324
+
+for (p in 1:(years * yearlyPeriods))
+{
+  principal <- principal + (principal * interestRate / yearlyPeriods)
+}
+
+principal
+
+```
+
+## Question 11
+
+```{r q11}
+#newNum <- as.numeric(1:20)
+eachThird <- seq(0, 20, 3)
+
+sum(eachThird)
+
+#eachThird <- newNum[seq(0, length(newNum), 3)]
+
+```
+
+## Question 12
+
+```{r q12}
+
+x <- 2
+sumTotal<- 0
+
+for (i in 1:10)
+{
+ sumTotal <- sumTotal + x ^ i
+}
+
+sumTotal
+```
+
+## Question 13
+
+```{r q14}
+x <- 2
+sumTotal <- 0
+i <- 1
+
+while (i <= 10)
+{
+  sumTotal <- sumTotal + x ^ i
+  i <- i + 1
+}
+
+sumTotal
+```
+
+## Question 14
+
+```{r q14} 
+2^1 + 2^2 + 2^3 + 2^4 + 2^5 + 2^6 + 2^7 + 2^8 + 2^9 + 2^10
+
+x <- 2
+sum(x^(1:10))
+```
