@@ -1,7 +1,0 @@
-"0","df_num <- as.numeric(c(1,2,3,1,2,3,1,2,3,1))"
-"0","df_char <- as.character(c(""one"", ""two"", ""three"", ""four"", ""five"", ""six"", ""seven"", ""eight"", ""nine"", ""ten""))"
-"0","df_fact <- c(""hi"", ""bye"", ""bye"", ""for"", ""hi"", ""hi"",""hi"",""hi"", ""hi"", ""hi"")"
-"0","df_date <- as.Date(c(""2001-1-1"", ""2002-1-1"", ""2003-1-1"", ""2004-1-1"", ""2005-1-1"","
-"0"," ""2006-1-1"", ""2007-1-1"", ""2008-1-1"", ""2009-1-1"", ""2010-1-1""))"
-"0","df <- data.frame(df_num, df_char, df_fact, df_date)"
-"0","df"

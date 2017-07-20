@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"Week 1 HW\"\nauthor: \"Bill\"\ndate: \"July 15, 2017\"\noutput: html_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n## Question 1\n\n```{r q1}\n\nfactTwelve <- 1\n  \nfor (i in 1:12)\n{\n    factTwelve <- factTwelve * i\n}\n\nfactTwelve\n```\n\n## Question 2\n\n```{r q2}\n\nnewSequence <- seq(20, 50, 5)\n\nnewSequence\n\n```\n\n## Question 3\n\n```{r q3}\n\na <- 5\nb <- 6\nc <- 7\nx <- 1\n\nquadEquation <- (a * x^2) + (b * x) + c\n\nquadEquation\n```",
+    "created" : 1500133069464.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2457756394",
+    "id" : "EC9927F",
+    "lastKnownWriteTime" : 1500133619,
+    "last_content_update" : 1500133619519,
+    "path" : "~/Desktop/summer17/R/Project1/Weekly One HW.Rmd",
+    "project_path" : "Weekly One HW.Rmd",
+    "properties" : {
+        "last_setup_crc32" : "",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
