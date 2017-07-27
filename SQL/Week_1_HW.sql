@@ -19,12 +19,27 @@ FROM planes
 ORDER BY engines DESC;
 
 SELECT 
-DISTINCT(engines),
+engines,
 seats,
 model
 FROM planes
-GROUP BY engines, seats
+GROUP BY engines, model
 ORDER BY engines DESC, seats DESC;
+
+SELECT engines,
+model,
+MAX(seats) AS 'Max Seats'
+FROM planes
+GROUP BY engines;
+
+SELECT
+DISTINCT
+engines AS 'Engine Type',
+model AS 'Airplane Model',
+seats AS 'Max Number of Seats'
+FROM planes
+WHERE engines = '2'
+ORDER BY seats DESC;
 
 #3 336,776 flights
 

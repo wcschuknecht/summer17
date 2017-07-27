@@ -1,0 +1,28 @@
+---
+title: "Week 1 Quiz"
+author: "Bill"
+date: "July 14, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Header 1
+
+Placeholder for text.
+
+```{r cars}
+n <- 1,2
+```
+
+## Header 2
+
+Placeholder for text.
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

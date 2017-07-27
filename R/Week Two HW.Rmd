@@ -1,0 +1,50 @@
+---
+title: "Week 2 HW"
+author: "Bill"
+date: "July 27, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R has built in functions for choose() and factorial(). Your task is to write your own variation of the choose() function, that does not use either of these functions.
+
+```{r q1}
+# Create function that executes n choose r, complete with error handling for numeric, greater than zero conditions.
+
+ncr <- function(n, r) {
+        # Error handling checks to make sure numeric and greater than zero conditions are met
+        if ((n <= 0) || (r <= 0) || !is.numeric(n) || !is.numeric(r)){
+                answer <- "Both arguments need to be numeric and greater than zero."
+                return(answer)
+        # Checks to make sure first argument "n" is greater than second argument "r"
+        } else if (n < r) {
+                answer <- "First argument must be greater than the second."
+                return(answer)
+        # Assuming above conditions are met, below portion of function executes n choose r logic
+        } else {
+                nfactorial <- prod(1:n)
+                rfactorial <- prod(1:r)
+                if (n == r) {
+                        nrfactorial <- 1
+                } else {
+                        nrfactorial <- prod(1:(n - r))
+                }
+                my_choose <- nfactorial / (nrfactorial * rfactorial)
+        }
+        return(my_choose)
+}
+```
+
+```{r q2}
+# Test funcion with test values, checking for error handling as well
+
+ncr(5, 3)
+ncr(5, 4)
+ncr(5, 5)
+ncr(5, 6)
+ncr(-5, 3)
+ncr("f", 3)
+```
