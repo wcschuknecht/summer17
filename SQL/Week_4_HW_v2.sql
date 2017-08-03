@@ -51,9 +51,9 @@ VALUES
 # Q1
 
 SELECT
-User_Group,
-Room_Name
-FROM User_Group_Room;
+User_Name,
+Group_Name
+FROM User_Group;
 
 # Q2
 
