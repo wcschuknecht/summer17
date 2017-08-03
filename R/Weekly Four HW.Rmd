@@ -1,0 +1,46 @@
+---
+title: "Week 4 HW"
+author: "Bill"
+date: "August 2, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r }
+
+URL <- "https://archive.ics.uci.edu/ml/machine-learning-databases/mushroom/agaricus-lepiota.data";
+mushrooms <- read.table(URL, header = FALSE,  sep = ",", stringsAsFactors = FALSE);
+mushrooms <- mushrooms[c(1, 2, 3, 4)];
+names(mushrooms) <- c("class", "capshape", "capsurface", "capcolor");
+
+mushrooms$class[mushrooms$class == "p"] = "poisonous"
+mushrooms$class[mushrooms$class == "e"] = "edible"
+
+mushrooms$capshape[mushrooms$capshape == "b"] = "bell"
+mushrooms$capshape[mushrooms$capshape == "c"] = "conical"
+mushrooms$capshape[mushrooms$capshape == "x"] = "convex"
+mushrooms$capshape[mushrooms$capshape == "f"] = "flat"
+mushrooms$capshape[mushrooms$capshape == "k"] = "knobbed"
+mushrooms$capshape[mushrooms$capshape == "s"] = "sunken"
+
+mushrooms$capsurface[mushrooms$capsurface == "f"] = "fibrous"
+mushrooms$capsurface[mushrooms$capsurface == "g"] = "grooves"
+mushrooms$capsurface[mushrooms$capsurface == "y"] = "scaly"
+mushrooms$capsurface[mushrooms$capsurface == "s"] = "smooth"
+
+mushrooms$capcolor[mushrooms$capcolor == "n"] = "brown"
+mushrooms$capcolor[mushrooms$capcolor == "b"] = "buff"
+mushrooms$capcolor[mushrooms$capcolor == "c"] = "cinnamon"
+mushrooms$capcolor[mushrooms$capcolor == "g"] = "gray"
+mushrooms$capcolor[mushrooms$capcolor == "r"] = "green"
+mushrooms$capcolor[mushrooms$capcolor == "p"] = "pink"
+mushrooms$capcolor[mushrooms$capcolor == "u"] = "purple"
+mushrooms$capcolor[mushrooms$capcolor == "e"] = "red"
+mushrooms$capcolor[mushrooms$capcolor == "w"] = "white"
+mushrooms$capcolor[mushrooms$capcolor == "y"] = "yellow"
+
+
+```
