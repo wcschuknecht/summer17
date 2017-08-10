@@ -1,0 +1,67 @@
+---
+title: "Wk 5 HW"
+author: "Bill"
+date: "August 10, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Australian athletes data set
+
+Found data on various characteristics of the bloood varied with sport body size and sex of the athlete. Dataset includes 202 observations and 13 variables.
+
+
+
+```{r }
+
+# Read to dataframe generate head
+
+ais <- read.csv("https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/DAAG/ais.csv")
+head(ais)
+
+```
+
+
+```{r summary table}
+
+# Generate summary table
+
+summary(ais)
+```
+
+```{r viz 1}
+
+# Load ggplot2 for data visualation and generate histogram
+
+require(ggplot2)
+
+ggplot(data = ais) + geom_histogram(aes(x = bmi))
+```
+
+```{r viz 2}
+
+# Generate multi-histogram
+
+ggplot(data = ais) + geom_histogram(aes(x = wt)) + facet_wrap(~sport)
+```
+
+```{r viz 3}
+
+# Scatterplot
+
+ggplot(ais, aes(x = ht, y = bmi)) + geom_point()
+
+```
+
+```{r viz 4}
+
+# Boxpot
+
+ggplot(ais, aes(y = lbm, x = ht)) + geom_boxplot()
+
+```
+
+These basic data visualizations provide quick insight around the variables within this dataset. 
