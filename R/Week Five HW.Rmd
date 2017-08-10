@@ -52,7 +52,7 @@ ggplot(data = ais) + geom_histogram(aes(x = wt)) + facet_wrap(~sport)
 
 # Scatterplot
 
-ggplot(ais, aes(x = ht, y = bmi)) + geom_point()
+ggplot(ais, aes(x = ht, y = bmi)) + geom_point(aes(color=wt))
 
 ```
 
