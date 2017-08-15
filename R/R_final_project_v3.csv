@@ -1,0 +1,153 @@
+Network,Mobile OS,Mobile Device Type,Device,Device Group,VOD Episode,Linear Stream,Unique Viewers,Total Streaming
+NBC Sports,iOS,Mobile Phone,iPhone,Mobile App,65471,1133926,227249,1199397
+NBC Sports,iOS,Tablet,iPad,Mobile App,56858,456502,102767,513360
+NBC Sports,iOS,Media Player,iPod,Mobile App,577,3902,806,4479
+NBC Sports,Android,Mobile Phone,Android Phone,Mobile App,29878,695005,90994,724883
+NBC Sports,Android,Tablet,Android Tablet,Mobile App,12309,119346,22956,131655
+NBC Sports,Unknown,Apple TV,Apple TV,Connected Device,85648,384664,83358,470312
+NBC Sports,Unknown,Roku,Roku,Connected Device,74467,358860,247559,433327
+NBC Sports,Unknown,Fire TV,Fire TV,Connected Device,39654,242721,49223,282375
+NBC Sports,Unknown,Xbox,Xbox One,Connected Device,18203,59310,13507,77513
+NBC Sports,Unknown,Samsung TV,Samsung TV,Connected Device,6123,11871,3607,17994
+NBC Sports,Unknown,Other,Desktop,Desktop,229611,1470266,545459,1699877
+NBC Sports,Windows,Tablet,Windows Tablet,Mobile App,226,962,381,1188
+Golf Channel,Unknown,Other,Desktop,Desktop,23440,348689,78442,372129
+USA,iOS,Mobile Phone,iPhone,Mobile App,399221,165752,90841,564973
+USA,iOS,Tablet,iPad,Mobile App,241511,78581,56291,320092
+USA,iOS,Media Player,iPod,Mobile App,2360, -   ,372,2360
+USA,Android,Mobile Phone,Android Phone,Mobile App,119601,80926,31492,200527
+USA,Android,Tablet,Android Tablet,Mobile App,39583,20520,9968,60103
+USA,Android,Gaming Console,Android Other,Mobile App, -   , -   ,0, -   
+USA,Android,Set-top Box,Android Other,Mobile App,188,589,63,777
+USA,Android,Other,Android Other,Mobile App,35,9,12,44
+USA,Windows,Mobile Phone,Windows Phone,Mobile App,127, -   ,26,127
+Telemundo,iOS,Mobile Phone,iPhone,Mobile App,525336,158,49179,525494
+Telemundo,iOS,Tablet,iPad,Mobile App,188550,13,14512,188563
+Telemundo,iOS,Media Player,iPod,Mobile App,2893, -   ,270,2893
+Telemundo,Android,Mobile Phone,Android Phone,Mobile App,192780,101,21934,192881
+Telemundo,Android,Tablet,Android Tablet,Mobile App,39221,2,4067,39223
+Telemundo,Android,Set-top Box,Android Other,Mobile App,254, -   ,23,254
+Telemundo,Android,Gaming Console,Android Other,Mobile App, -   , -   ,0, -   
+Telemundo,Android,Other,Android Other,Mobile App,71, -   ,3,71
+Telemundo,Windows,Mobile Phone,Windows Phone,Mobile App,421, -   ,72,421
+Bravo,iOS,Mobile Phone,iPhone,Mobile App,1382122,231322,158072,1613444
+Bravo,iOS,Tablet,iPad,Mobile App,1117755,205307,120975,1323062
+Bravo,iOS,Media Player,iPod,Mobile App,2349,3,319,2352
+Bravo,Android,Mobile Phone,Android Phone,Mobile App,174289,32484,19678,206773
+Bravo,Android,Tablet,Android Tablet,Mobile App,78699,12689,9025,91388
+Bravo,Windows,Mobile Phone,Windows Phone,Mobile App,183, -   ,16,183
+E!,iOS,Mobile Phone,iPhone,Mobile App,319383,19582,55573,338965
+E!,iOS,Tablet,iPad,Mobile App,173508,15345,29580,188853
+E!,iOS,Media Player,iPod,Mobile App,2080, -   ,340,2080
+E!,Android,Mobile Phone,Android Phone,Mobile App,40540,3118,5345,43658
+E!,Android,Tablet,Android Tablet,Mobile App,13020,1189,1869,14209
+Syfy,iOS,Mobile Phone,iPhone,Mobile App,157282,16245,30597,173527
+Syfy,iOS,Tablet,iPad,Mobile App,158342,14113,29869,172455
+Syfy,iOS,Media Player,iPod,Mobile App,1687, -   ,300,1687
+Syfy,Android,Mobile Phone,Android Phone,Mobile App,71492,8289,12803,79781
+Syfy,Android,Tablet,Android Tablet,Mobile App,38418,4634,6547,43052
+Syfy,Windows,Mobile Phone,Windows Phone,Mobile App,543, -   ,100,543
+Sprout,iOS,Tablet,iPad,Mobile App,156116,8082,9257,164198
+Sprout,iOS,Mobile Phone,iPhone,Mobile App,62971,3860,6151,66831
+Sprout,iOS,Media Player,iPod,Mobile App,2001, -   ,161,2001
+Sprout,Android,Tablet,Android Tablet,Mobile App,60582,2937,4788,63519
+Sprout,Android,Mobile Phone,Android Phone,Mobile App,27740,2999,3257,30739
+Sprout,Unknown,Other,Unknown Mobile,Mobile App,1928,1040,217,2968
+Oxygen,iOS,Mobile Phone,iPhone,Mobile App,24084,13234,5878,37318
+Oxygen,iOS,Tablet,iPad,Mobile App,14729,8836,3621,23565
+Oxygen,iOS,Media Player,iPod,Mobile App,117, -   ,40,117
+Oxygen,Android,Mobile Phone,Android Phone,Mobile App,7290,5355,1870,12645
+Oxygen,Android,Tablet,Android Tablet,Mobile App,2717,2307,736,5024
+Oxygen,Android,Other,Unknown Mobile,Mobile App,128,155,54,283
+CNBC,iOS,Mobile Phone,iPhone,Mobile App,26059,281092,18563,307151
+CNBC,iOS,Tablet,iPad,Mobile App,19181,295488,14327,314669
+CNBC,iOS,Media Player,iPod,Mobile App,25,21,21,46
+CNBC,Windows,Mobile Phone,Windows Phone,Mobile App,50, -   ,9,50
+CNBC,Android,Mobile Phone,Android Phone,Mobile App,5984,24295,4455,30279
+CNBC,Android,Tablet,Android Tablet,Mobile App,1515,5735,1243,7250
+MSNBC,iOS,Mobile Phone,iPhone,Mobile App,199478,1477623,61510,1677101
+MSNBC,iOS,Tablet,iPad,Mobile App,139399,949377,43919,1088776
+MSNBC,iOS,Media Player,iPod,Mobile App,1553,131,230,1684
+Esquire,iOS,Mobile Phone,iPhone,Mobile App, -   , -   ,0, -   
+Esquire,iOS,Tablet,iPad,Mobile App, -   , -   ,0, -   
+Esquire,iOS,Media Player,iPod,Mobile App, -   , -   ,0, -   
+NBC Universo,iOS,Mobile Phone,iPhone,Mobile App,37925,894,4038,38819
+NBC Universo,iOS,Tablet,iPad,Mobile App,7335,256,826,7591
+NBC Universo,iOS,Media Player,iPod,Mobile App,609, -   ,48,609
+NBC Universo,Android,Mobile Phone,Android Phone,Mobile App,15141,717,1450,15858
+NBC Universo,Android,Tablet,Android Tablet,Mobile App,1779,109,197,1888
+NBC Entertainment,iOS,Mobile Phone,iPhone,Mobile App,1826387,97200,263515,1923587
+NBC Entertainment,iOS,Tablet,iPad,Mobile App,1638150,110711,234100,1748861
+NBC Entertainment,iOS,Media Player,iPod,Mobile App,21859,688,3237,22547
+NBC Entertainment,Android,Mobile Phone,Android Phone,Mobile App,1120510,18660,152005,1139170
+NBC Entertainment,Android,Tablet,Android Tablet,Mobile App,341408,9096,44400,350504
+NBC Entertainment,Android,Other,Android Other,Mobile App,165,11,23,176
+NBC Entertainment,Android,Set-top Box,Android Other,Mobile App,1381,76,182,1457
+NBC Entertainment,Android,Media Player,Android Other,Mobile App, -   , -   ,0, -   
+E!,Unknown,Other,Roku,Connected Device,172500, -   ,29093,172500
+E!,Unknown,Other,Apple TV,Connected Device,134792, -   ,20316,134792
+E!,Unknown,Other,Chromecast,Connected Device,84259,3917,8572,88176
+USA,Unknown,Other,Apple TV,Connected Device,358174, -   ,61182,358174
+USA,Unknown,Other,Roku,Connected Device,283567, -   ,54938,283567
+USA,Unknown,Other,Chromecast,Connected Device,147146,18907,19045,166053
+USA,Unknown,Other,Xbox One,Connected Device,21069, -   ,5031,21069
+Bravo,Unknown,Other,Roku,Connected Device,722305, -   ,96139,722305
+Bravo,Unknown,Other,Apple TV,Connected Device,566393, -   ,52321,566393
+Bravo,Unknown,Other,Chromecast,Connected Device,391414,29821,27485,421235
+Bravo,Unknown,Other,Xbox One,Connected Device,15029, -   ,2075,15029
+Telemundo,Unknown,Other,Roku,Connected Device,261721, -   ,30635,261721
+Telemundo,Unknown,Other,Chromecast,Connected Device,88536,2,5562,88538
+Telemundo,Unknown,Other,Apple TV,Connected Device,63880, -   ,4473,63880
+Telemundo,Unknown,Other,Xbox One,Connected Device,16308, -   ,1511,16308
+Syfy,Unknown,Other,Roku,Connected Device,209906, -   ,42079,209906
+Syfy,Unknown,Other,Apple TV,Connected Device,134109, -   ,21614,134109
+Syfy,Unknown,Other,Chromecast,Connected Device,81345,2628,8402,83973
+Syfy,Unknown,Other,Xbox One,Connected Device,57980, -   ,8395,57980
+NBC Entertainment,Unknown,Other,Apple TV,Connected Device,1190524,113,205891,1190637
+NBC Entertainment,Unknown,Other,Roku,Connected Device,1389583, -   ,280927,1389583
+NBC Entertainment,Unknown,Other,Fire TV,Connected Device,842508,10,108267,842518
+NBC Entertainment,Unknown,Other,Chromecast,Connected Device,497657,17254,50647,514911
+NBC Entertainment,Unknown,Other,Samsung TV,Connected Device,120852, -   ,23244,120852
+NBC Entertainment,Unknown,Other,Xbox One,Connected Device,70154, -   ,12635,70154
+NBC Entertainment,Unknown,Other,Xbox 360,Connected Device,24067, -   ,3534,24067
+CNBC,Unknown,Other,Roku,Connected Device,32521, -   ,7058,32521
+CNBC,Unknown,Other,Chromecast,Connected Device,1057,1772,575,2829
+Oxygen,Unknown,Other,Chromecast,Connected Device,8134,2783,1364,10917
+MSNBC,Unknown,Other,Chromecast,Connected Device,14327,36542,4189,50869
+NBC Universo,Unknown,Other,Chromecast,Connected Device,5232,175,432,5407
+Sprout,Unknown,Other,Chromecast,Connected Device,3433,1526,916,4959
+Esquire,Unknown,Other,Chromecast,Connected Device, -   , -   ,0, -   
+NBC Entertainment,Unknown,Other,Desktop,Desktop,3420629,121637,894016,3542266
+Bravo,Unknown,Other,Desktop,Desktop,953353,28451,189981,981804
+E!,Unknown,Other,Desktop,Desktop,175343,4993,34845,180336
+Syfy,Unknown,Other,Desktop,Desktop,232366,7432,62499,239798
+USA,Unknown,Other,Desktop,Desktop,366502,33172,125603,399674
+MSNBC,Unknown,Other,Desktop,Desktop,132999,747622,119158,880621
+Oxygen,Unknown,Other,Desktop,Desktop,10630,1113,3984,11743
+NBC News,Unknown,Other,Desktop,Desktop,20661, -   ,11390,20661
+CNBC,Unknown,Other,Desktop,Desktop,58255,209966,46522,268221
+Telemundo,Unknown,Other,Desktop,Desktop,28109, -   ,3934,28109
+NBC Universo,Unknown,Other,Desktop,Desktop,5551,124,981,5675
+Esquire,Unknown,Other,Desktop,Desktop,2, -   ,1,2
+NBC Sports,Unknown,Other,Desktop,Desktop,71,110185,33406,110256
+Golf Channel,Unknown,Other,Desktop,Desktop,5,56060,21929,56065
+CNBC,Unknown,Other,Apple TV,Connected Device,65828,117394,28172,183222
+NBC Entertainment,GA Custom,GA Custom,Fire TV,Connected Device,45835, -   ,38617,45835
+USA,GA Custom,GA Custom,Fire TV,Connected Device,165906, -   ,137877,165906
+Bravo,GA Custom,GA Custom,Fire TV,Connected Device,406503, -   ,341514,406503
+E!,GA Custom,GA Custom,Fire TV,Connected Device,80220, -   ,68619,80220
+Syfy,GA Custom,GA Custom,Fire TV,Connected Device,133635, -   ,108150,133635
+Telemundo,GA Custom,GA Custom,Fire TV,Connected Device,121712, -   ,104046,121712
+Golf Channel,iOS,Mobile Phone,iPhone,Mobile App,8130,485071,86352,493201
+Golf Channel,iOS,Tablet,iPad,Mobile App,6912,198801,40007,205713
+Golf Channel,iOS,Media Player,iPod,Mobile App,17,732,129,749
+Golf Channel,Android,Mobile Phone,Android Phone,Mobile App,1827,77089,14106,78916
+Golf Channel,Android,Tablet,Android Tablet,Mobile App,580,19318,3754,19898
+NBC Sports,Unknown,Apple TV,Apple TV,Connected Device,342,1023,646,1365
+NBC Sports,Unknown,Roku,Roku,Connected Device,1712,2699,2005,4411
+NBC Sports,Unknown,Fire TV,Fire TV,Connected Device,822,1315,1050,2137
+NBC Sports,iOS,Mobile Phone,iPhone,Mobile App,5737,107011,42239,112748
+NBC Sports,iOS,Tablet,iPad,Mobile App,1188,7728,3582,8916
+NBC Sports,iOS,Media Player,iPod,Mobile App,50,156,85,206
+NBC Sports,Android,Mobile Phone,Android Phone,Mobile App,3277,138558,32713,141835
+NBC Sports,Android,Tablet,Android Tablet,Mobile App,825,1332,1058,2157
