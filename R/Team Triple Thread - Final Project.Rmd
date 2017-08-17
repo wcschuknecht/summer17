@@ -1,0 +1,64 @@
+---
+title: "CUNY R Summer Bridge - Final Project"
+author: "Team Triple Threat: Mariya, Josh, Bill"
+date: "August 15, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Dataset
+
+First, let's read in the data from github and generate a DataFrame.
+
+```{r }
+# Reading data from our github, generating DataFrame
+
+df <- read.csv("https://raw.githubusercontent.com/wcschuknecht/summer17/master/R/final_data.txt", sep = "\t", header = FALSE, stringsAsFactors = FALSE)
+colnames(df) <- c("mpg", "cylinders", "displacement", "horsepower", "weight", "acceleration", "model_year", "origin", "car_name")
+head(df)
+```
+
+## Data Exploration
+
+Next, let's do some data exploration on our new DataFrame using various base methods on df.
+
+```{r data exploration}
+
+# Summary statistics to ascertain mean, median, min, max, and quartiles
+
+summary(df)
+
+# Structure informs the shape of the overall DataFrame and the data type of each variable
+
+str(df)
+
+```
+
+## Data Wrangling
+
+TBD
+
+```{r data wrangling}
+
+# TBD
+
+```
+
+## Graphics
+
+TBD
+
+```{r graphics}
+
+hist(df$mpg)
+
+plot(df$horsepower, df$mpg)
+
+```
+
+## Questions & Analysis
+
+TBD
