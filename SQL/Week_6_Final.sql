@@ -1,13 +1,14 @@
-#USE buildingenergy;
+DROP SCHEMA IF EXISTS buildingenergy;
 
-DROP TABLE IF EXISTS EnergyCategories;
-DROP TABLE IF EXISTS EnergyTypes;
-DROP TABLE IF EXISTS Buildings;
+CREATE SCHEMA IF NOT EXISTS buildingenergy;
+
+USE buildingenergy;
 
 CREATE TABLE EnergyCategories
-(
-catID INT PRIMARY KEY NOT NULL,
-energy_cat VARCHAR(30)
+	(
+	catID INT NOT NULL,
+	energy_cat VARCHAR(30),
+	PRIMARY KEY (catID)
 );
 
 INSERT INTO EnergyCategories
@@ -16,21 +17,26 @@ VALUES
 (2, 'Renewable');
 
 CREATE TABLE EnergyTypes
-(
-typeID INT PRIMARY KEY NOT NULL,
-energy_type VARCHAR(30),
-energy_catID INT
-);
+	(
+	typeID INT NOT NULL,
+	energy_type VARCHAR(30),
+	energy_catID INT,
+    PRIMARY KEY (typeID),
+    FOREIGN KEY (energy_catID) 
+		REFERENCES Energycategories(catID)
+		ON DELETE SET NULL
+        ON UPDATE CASCADE
+	);
 
 INSERT INTO EnergyTypes
-VALUES 
-(1, 'Electricity', 1),
-(2, 'Gas', 1),
-(3, 'Steam', 1),
-(4, 'Fuel Oil', 1),
-(5, 'Solar', 2),
-(6, 'Wind', 2),
-(7, 'Geothermal', 2);
+	VALUES 
+	(1, 'Electricity', 1),
+	(2, 'Gas', 1),
+	(3, 'Steam', 1),
+	(4, 'Fuel Oil', 1),
+	(5, 'Solar', 2),
+	(6, 'Wind', 2),
+	(7, 'Geothermal', 2);
 
 SELECT
 ec.energy_cat,
@@ -42,32 +48,54 @@ ON ec.catID = et.energy_catID
 ORDER BY et.energy_type;
 
 CREATE TABLE Buildings
-(
-buildingID INT PRIMARY KEY NOT NULL,
-building_name VARCHAR(60),
-typeID INT REFERENCES EnergyTypes(typeID)
-);
+	(
+	buildingID INT NOT NULL,
+	building_name VARCHAR(60),
+	PRIMARY KEY (buildingID)
+	);
 
 INSERT INTO Buildings
-VALUES
-(1, 'Empire State Building', 1),
-(2, 'Empire State Building', 2),
-(3, 'Empire State Building', 3),
-(4, 'Chrysler Building', 1),
-(5, 'Chrysler Building', 3), 
-(6, 'Borough of Manhattan Community College', 1),
-(7, 'Borough of Manhattan Community College', 3),
-(8, 'Borough of Manhattan Community College', 5),
-(9, 'Bronx Lion House', 7),
-(10, 'Brooklyn Childrens Museum', 1),
-(11, 'Brooklyn Childrens Museum', 7);
+	VALUES
+	(1, 'Empire State Building'),
+	(2, 'Chrysler Building'),
+	(3, 'Borough of Manhattan Community College'),
+	(4, 'Bronx Lion House'),
+	(5, 'Brooklyn Childrens Museum');
+
+CREATE TABLE Buildings_EnergyTypes
+	(
+	BuildingID INT,
+	FOREIGN KEY (BuildingID) 
+		REFERENCES Buildings(buildingID)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+	EnergyTypeID INT,
+	FOREIGN KEY (EnergyTypeID) 
+		REFERENCES EnergyTypes(typeID)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE  
+	);
+
+INSERT INTO Buildings_EnergyTypes
+	VALUES 
+	(1, 1),
+	(1, 2),
+	(1, 3),
+	(2, 1),
+	(2, 3), 
+	(3, 1),
+	(3, 3),
+	(3, 5),
+	(4, 7),
+	(5, 1),
+	(5, 7);
 
 SELECT
 b.building_name,
 et.energy_type
 FROM Buildings b
-LEFT JOIN EnergyTypes et
-ON b.typeID = et.typeID
+LEFT JOIN Buildings_EnergyTypes bet ON b.buildingID = bet.BuildingID
+LEFT JOIN EnergyTypes et ON bet.EnergyTypeID = et.typeID
 ORDER BY b.building_name;
 
 SELECT
@@ -75,10 +103,9 @@ b.building_name,
 et.energy_type,
 ec.energy_cat
 FROM Buildings b
-LEFT JOIN EnergyTypes et
-ON b.typeID = et.typeID
-LEFT JOIN EnergyCategories ec
-ON ec.catID = et.energy_catID 
+LEFT JOIN Buildings_EnergyTypes bet ON b.buildingID = bet.BuildingID
+LEFT JOIN EnergyTypes et ON bet.EnergyTypeID = et.typeID
+LEFT JOIN EnergyCategories ec ON et.energy_catID = ec.catID
 WHERE ec.energy_cat = 'Renewable'
 ORDER BY b.building_name;
 
@@ -86,7 +113,7 @@ SELECT
 DISTINCT et.energy_type,
 COUNT(et.energy_type)
 FROM Buildings b
-LEFT JOIN EnergyTypes et
-ON b.typeID = et.typeID
+LEFT JOIN Buildings_EnergyTypes bet ON b.buildingID = bet.BuildingID
+LEFT JOIN EnergyTypes et ON bet.EnergyTypeID = et.typeID
 GROUP BY et.energy_type
 ORDER BY COUNT(et.energy_type) DESC;

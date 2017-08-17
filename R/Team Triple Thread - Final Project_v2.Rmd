@@ -1,0 +1,103 @@
+---
+title: "CUNY R Summer Bridge - Final Project"
+author: "Team Triple Threat: Mariya, Josh, Bill"
+date: "August 15, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Dataset
+
+First, let's read in the data from github and generate a DataFrame.
+
+```{r }
+# Reading data from our github, generating DataFrame
+
+df <- read.csv("https://raw.githubusercontent.com/wcschuknecht/summer17/master/R/final_data.txt", sep = "\t", header = FALSE, stringsAsFactors = FALSE)
+colnames(df) <- c("mpg", "cylinders", "displacement", "horsepower", "weight", "acceleration", "model_year", "origin", "car_name")
+head(df)
+```
+
+## Data Exploration
+
+Next, let's do some data exploration on our new DataFrame using various base methods on df.
+
+```{r data exploration}
+
+# Summary statistics to ascertain mean, median, min, max, and quartiles
+
+summary(df)
+
+# Structure informs the shape of the overall DataFrame and the data type of each variable
+
+str(df)
+
+```
+
+## Data Wrangling
+#### Rename the columns, add car make and engine size to the dataset, categorize misspellings, and classify models
+
+```{r data wrangling}
+
+names(df)[1] <- "MPG"
+names(df)[2] <- "Cylinders"
+names(df)[3] <- "Displacement"
+names(df)[4] <- "Horsepower"
+names(df)[5] <- "Weight"
+names(df)[6] <- "Acceleration"
+names(df)[7] <- "Year"
+names(df)[8] <- "Origin"
+names(df)[9] <- "Car_Name"
+df$Car_Make <- sapply(strsplit(df$Car_Name," "), `[`, 1)
+names(df)[10] <- "Car_Make"
+df$Engine <- (df$Cylinders * df$Displacement) / 1000
+names(df)[11] <- "Engine"
+
+#
+df[,10] = sapply(df[,10],as.character)
+df$Car_Make[df$Car_Make == 'chevy'] <- "chevrolet"
+df$Car_Make[df$Car_Make == 'chevroelt'] <- "chevrolet"
+df$Car_Make[df$Car_Make == 'maxda'] <- "mazda"
+df$Car_Make[df$Car_Make == 'mercedes-benz'] <- "mercedes"
+df$Car_Make[df$Car_Make == 'toyouta'] <- "toyota"
+df$Car_Make[df$Car_Make == 'vokswagen'] <- "volkswagen"
+df$Car_Make[df$Car_Make == 'vw'] <- "volkswagen"
+df$Car_Make[df$Car_Make == 'mercury'] <- "ford"
+df$Car_Make[df$Car_Make == 'datsun'] <- "nissan"
+
+head(df)
+
+```
+
+## Graphics
+#### Scatterplot showing horsepower and MPG, colored by model year
+#### Scatterplot featuring car make and MPG, colored by model year
+#### Histogram displaying frequency of each MPG in ranges of 5
+#### Box plot showing median of MPG across all cars in the data set
+
+```{r graphics}
+
+require(ggplot2)
+ggplot(df, aes(x = Horsepower, y = MPG)) + geom_point(aes(color=Year))
+
+ggplot(df, aes(x = Car_Make, y = MPG)) + geom_point(aes(color=Year)) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+ggplot(df, aes(x = MPG)) + geom_histogram(breaks=seq(0, 50, by=5))
+
+ggplot(df, aes(y = MPG, x = 1)) + geom_boxplot()
+
+```
+
+## Questions & Analysis
+
+Question 1:  Does an increase in Horsepower have an effect on MPG?
+Answer 1:  Yes. The more horsepower a vehicle has, the less gas efficient it is.  
+
+Question 2:  Does Year have an effect on MPG efficiency?
+Answer 2:  Yes. Over time, newer models of vehicles gas efficient.
+
+Question 3:  Which Car Make is consistently the most gas efficient?
+Answer 3:  Nissan, Volkswagen, Honda
